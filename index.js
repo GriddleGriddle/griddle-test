@@ -1,6 +1,6 @@
 'use strict';
 
-var Griddle = require('griddle-render');
+var { Griddle } = require('griddle-render');
 var FakeData = require('./src/fake-data');
 var React = require('react');
 var ReactDOM = require('react-dom');
