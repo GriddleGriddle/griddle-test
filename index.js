@@ -13,7 +13,7 @@ var Test = React.createClass({
   render() {
 console.log(FakeData);
     return <div>
-      <GriddleComponent data={FakeData} dataKey={'renderedData'} >
+      <GriddleComponent data={FakeData}>
       </GriddleComponent>
     </div>
   }
