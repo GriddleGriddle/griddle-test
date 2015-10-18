@@ -4,7 +4,7 @@ module.exports = {
   devtool: 'source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
+    //'webpack/hot/only-dev-server',
     './index'
   ],
   output: {
@@ -13,15 +13,19 @@ module.exports = {
     publicPath: '/build/'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    //new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx'],
+    alias: {
+      "react": __dirname + '/node_modules/react',
+      "react/addons": __dirname + '/node_modules/react/addons'
+    }
   },
   module: {
     loaders: [
-      { test: /\.jsx?$/, loaders: ['react-hot', 'babel?{"plugins":["babel-plugin-object-assign"]}'], exclude: /node_modules/ }
+      { test: /\.jsx?$/, loaders: ['babel?{"plugins":["babel-plugin-object-assign"]}'], exclude: /node_modules/ }
     ]
   }
 };
