@@ -16,8 +16,6 @@ var Test = React.createClass({
     return <div>
       <GriddleComponent data={FakeData}>
         <DefaultModules.RowDefinition keyColumn="id">
-          <DefaultModules.ColumnDefinition id="name" displayName="Name" cssClassName="name-class" />
-          <DefaultModules.ColumnDefinition id="state" order={1} />
         </DefaultModules.RowDefinition>
       </GriddleComponent>
     </div>
