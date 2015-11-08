@@ -9,12 +9,14 @@ var ReactDOM = require('react-dom');
 //var ColumnDefinition = require('./src/column-definition');
 var { GriddleRedux } = require('griddle-connector');
 var SubgridPlugin = require('griddle-subgrid-plugin');
-var GriddleComponent = GriddleRedux({Griddle, Components: DefaultModules, Plugins: [SubgridPlugin] });
+var SelectionPlugin = require('griddle-selection-plugin');
+
+var GriddleComponent = GriddleRedux({Griddle, Components: DefaultModules, Plugins: [] });
 
 var Test = React.createClass({
   render() {
     return <div>
-      <GriddleComponent data={FakeData}>
+      <GriddleComponent data={FakeData} columns={['name', 'state', 'city', 'favoriteNumber']}>
         <DefaultModules.RowDefinition keyColumn="id">
         </DefaultModules.RowDefinition>
       </GriddleComponent>
