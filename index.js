@@ -2,7 +2,7 @@
 
 var { Griddle, DefaultModules } = require('griddle-render');
 
-var FakeData = require('./src/fake-subgrid-data');
+var FakeData = require('./src/fake-data');
 var React = require('react');
 var ReactDOM = require('react-dom');
 //var RowDefinition = require('./src/row-definition');
@@ -15,8 +15,8 @@ var GriddleComponent = GriddleRedux({Griddle, Components: DefaultModules, Plugin
 
 var Test = React.createClass({
   render() {
-    return <div>
-      <GriddleComponent data={FakeData} columns={['name', 'state', 'city', 'favoriteNumber']}>
+    return <div style={{width: 800}}>
+      <GriddleComponent data={FakeData} ignoredColumns={['favoriteNumber']} style={{ inlineStyles: {columnTitle: { backgroundColor: '#FAB'}, pagination: { backgroundColor: '#FAB'}}}}>
         <DefaultModules.RowDefinition keyColumn="id">
         </DefaultModules.RowDefinition>
       </GriddleComponent>
