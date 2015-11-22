@@ -16,7 +16,7 @@ var GriddleComponent = GriddleRedux({Griddle, Components: DefaultModules, Plugin
 var Test = React.createClass({
   render() {
     return <div style={{width: 800}}>
-      <GriddleComponent data={FakeData} ignoredColumns={['favoriteNumber']} style={{ inlineStyles: {columnTitle: { backgroundColor: '#FAB'}, pagination: { backgroundColor: '#FAB'}}}}>
+      <GriddleComponent data={FakeData} ignoredColumns={['favoriteNumber']}>
         <DefaultModules.RowDefinition keyColumn="id">
         </DefaultModules.RowDefinition>
       </GriddleComponent>
