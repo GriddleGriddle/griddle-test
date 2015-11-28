@@ -9,7 +9,9 @@ module.exports = {
   output: {
     path: __dirname + '/build/',
     filename: 'griddle.js',
-    publicPath: '/build/'
+    publicPath: '/build/',
+    library: 'Griddle',
+    libraryTarget: 'umd'
   },
   plugins: [
     new webpack.NoErrorsPlugin()
@@ -25,5 +27,8 @@ module.exports = {
     loaders: [
       { test: /\.jsx?$/, loaders: ['babel?{"plugins":["babel-plugin-object-assign"]}'], exclude: /node_modules/ }
     ]
+  },
+  externals: {
+    "react": "React",
   }
 };

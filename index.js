@@ -2,26 +2,23 @@
 
 var { Griddle, DefaultModules } = require('griddle-render');
 
-var FakeData = require('./src/fake-data');
 var React = require('react');
 var ReactDOM = require('react-dom');
 //var RowDefinition = require('./src/row-definition');
 //var ColumnDefinition = require('./src/column-definition');
 var { GriddleRedux } = require('griddle-connector');
-var SubgridPlugin = require('griddle-subgrid-plugin');
-var SelectionPlugin = require('griddle-selection-plugin');
 
-var GriddleComponent = GriddleRedux({Griddle, Components: DefaultModules, Plugins: [] });
+export default class extends React.Component {
+  constructor(props) {
+    super(props);
+    this.component = GriddleRedux({Griddle, Components: DefaultModules, Plugins: this.props.plugins });
+  }
 
-var Test = React.createClass({
   render() {
     return <div style={{width: 800}}>
-      <GriddleComponent data={FakeData} ignoredColumns={['favoriteNumber']}>
-        <DefaultModules.RowDefinition keyColumn="id">
-        </DefaultModules.RowDefinition>
-      </GriddleComponent>
+      <this.component data={this.props.data} >
+        {this.props.children}
+      </this.component>
     </div>
   }
-});
-
-ReactDOM.render(<Test />, document.getElementById('main'));
+}
