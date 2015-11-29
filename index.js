@@ -16,7 +16,7 @@ export default class extends React.Component {
 
   render() {
     return <div style={{width: 800}}>
-      <this.component data={this.props.data} >
+      <this.component {...this.props}>
         {this.props.children}
       </this.component>
     </div>
