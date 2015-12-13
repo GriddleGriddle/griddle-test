@@ -3,9 +3,6 @@
 var { Griddle, DefaultModules } = require('griddle-render');
 
 var React = require('react');
-var ReactDOM = require('react-dom');
-//var RowDefinition = require('./src/row-definition');
-//var ColumnDefinition = require('./src/column-definition');
 var { GriddleRedux } = require('griddle-connector');
 
 export default class extends React.Component {

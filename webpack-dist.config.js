@@ -1,9 +1,7 @@
-var webpack = require('webpack');
+var webpack = require('webpack')
 
 module.exports = {
-  devtool: 'source-map',
   entry: [
-    'webpack-dev-server/client?http://localhost:3000',
     './index'
   ],
   output: {
@@ -12,16 +10,6 @@ module.exports = {
     publicPath: '/build/',
     library: 'Griddle',
     libraryTarget: 'umd'
-  },
-  plugins: [
-    new webpack.NoErrorsPlugin()
-  ],
-  resolve: {
-    extensions: ['', '.js', '.jsx'],
-    alias: {
-      "react": __dirname + '/node_modules/react',
-      "react/addons": __dirname + '/node_modules/react/addons'
-    }
   },
   module: {
     loaders: [
