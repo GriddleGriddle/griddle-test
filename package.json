@@ -1,6 +1,6 @@
 {
   "name": "griddle-test",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "Testing area for wiring up the various griddle modules",
   "main": "build/griddle.js",
   "scripts": {
@@ -18,7 +18,9 @@
     "webpack-dev-server": "~1.9.0"
   },
   "dependencies": {
-    "griddle-render": "0.0.3",
+    "griddle-connector": "0.0.5",
+    "griddle-core": "0.0.3",
+    "griddle-render": "0.0.5",
     "react": "^0.14.0"
   },
   "author": "Griddle",
