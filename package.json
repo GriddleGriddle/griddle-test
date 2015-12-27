@@ -21,6 +21,7 @@
     "griddle-connector": "0.0.5",
     "griddle-core": "0.0.3",
     "griddle-render": "*",
+    "lodash.assign": "^3.2.0",
     "react": "^0.14.0"
   },
   "author": "Griddle",
