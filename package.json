@@ -1,6 +1,6 @@
 {
   "name": "griddle-test",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Testing area for wiring up the various griddle modules",
   "main": "build/griddle.js",
   "scripts": {
